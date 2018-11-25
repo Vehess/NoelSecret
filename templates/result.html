@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SecretSanta</title>	
+
+    <link     href='http://fonts.googleapis.com/css?family=Sintony:400,700'     rel='stylesheet' type='text/css'>
+
+    <style type="text/css">    
+      body
+      {
+        background-image:url(/static/images/SecretSanta.jpg);
+		background-position: top center;
+		background-repeat: no-repeat;
+      }
+
+      h1
+      {
+        font-size:48px;
+        margin-top:0;
+        font-family:Arial, sans-serif;
+        text-shadow:2px 0 15px #292929;
+        letter-spacing:4px;
+        text-decoration:none;
+        color:#DDD;
+      }
+
+      #banner
+      {
+        text-align:center;
+      }
+
+      .lead
+      {
+        background-color:rgba(255,255,255,0.6);
+        border-radius:3px;
+        box-shadow:rgba(0,0,0,0.2) 0 1px 3px;
+        font-family:Sintony, sans-serif;
+      }
+    </style>
+  </head> 	
+	
+	<body> 
+		<ul> 
+			{% for ligne in output %} 
+			<li>{{ ligne }}</li> 
+			{% endfor %} 
+		</ul>  
+		<form action="{{ url_for('result') }}" method="post">
+			<input type="submit" value="Tirage au sort !" formaction="{{ url_for('result') }}">
+		</form>
+	</body> 
+</html>
