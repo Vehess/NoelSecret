@@ -1,0 +1,6 @@
+# Git
+sudo apt-get install git
+# Python 3.6
+# sudo apt-get install python3.6
+# Ou Pip3
+sudo apt install python3-venv python3-pip
